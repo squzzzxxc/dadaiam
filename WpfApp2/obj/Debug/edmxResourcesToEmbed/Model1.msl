@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище ip117ModelContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="IMP_UP07_BuyProduct">
+      <EntityTypeMapping TypeName="ip117Model.IMP_UP07_BuyProduct">
+        <MappingFragment StoreEntitySet="IMP_UP07_BuyProduct">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IMP_UP07_Client">
+      <EntityTypeMapping TypeName="ip117Model.IMP_UP07_Client">
+        <MappingFragment StoreEntitySet="IMP_UP07_Client">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="GenderId" ColumnName="GenderId" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Patronymic" ColumnName="Patronymic" />
+          <ScalarProperty Name="BirthOfDay" ColumnName="BirthOfDay" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="VisitDate" ColumnName="VisitDate" />
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IMP_UP07_ClientService">
+      <EntityTypeMapping TypeName="ip117Model.IMP_UP07_ClientService">
+        <MappingFragment StoreEntitySet="IMP_UP07_ClientService">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IMP_UP07_Division">
+      <EntityTypeMapping TypeName="ip117Model.IMP_UP07_Division">
+        <MappingFragment StoreEntitySet="IMP_UP07_Division">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IMP_UP07_Employee">
+      <EntityTypeMapping TypeName="ip117Model.IMP_UP07_Employee">
+        <MappingFragment StoreEntitySet="IMP_UP07_Employee">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EmployeeCategoryId" ColumnName="EmployeeCategoryId" />
+          <ScalarProperty Name="CodeDivision" ColumnName="CodeDivision" />
+          <ScalarProperty Name="GenderId" ColumnName="GenderId" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Patronymic" ColumnName="Patronymic" />
+          <ScalarProperty Name="SeriesPassport" ColumnName="SeriesPassport" />
+          <ScalarProperty Name="NumberPassport" ColumnName="NumberPassport" />
+          <ScalarProperty Name="PaymentRatio" ColumnName="PaymentRatio" />
+          <ScalarProperty Name="BirthOfDay" ColumnName="BirthOfDay" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IMP_UP07_EmployeeCategory">
+      <EntityTypeMapping TypeName="ip117Model.IMP_UP07_EmployeeCategory">
+        <MappingFragment StoreEntitySet="IMP_UP07_EmployeeCategory">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IMP_UP07_Gender">
+      <EntityTypeMapping TypeName="ip117Model.IMP_UP07_Gender">
+        <MappingFragment StoreEntitySet="IMP_UP07_Gender">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IMP_UP07_ImageProduct">
+      <EntityTypeMapping TypeName="ip117Model.IMP_UP07_ImageProduct">
+        <MappingFragment StoreEntitySet="IMP_UP07_ImageProduct">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IMP_UP07_ImageService">
+      <EntityTypeMapping TypeName="ip117Model.IMP_UP07_ImageService">
+        <MappingFragment StoreEntitySet="IMP_UP07_ImageService">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IMP_UP07_Manufacturer">
+      <EntityTypeMapping TypeName="ip117Model.IMP_UP07_Manufacturer">
+        <MappingFragment StoreEntitySet="IMP_UP07_Manufacturer">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IMP_UP07_Product">
+      <EntityTypeMapping TypeName="ip117Model.IMP_UP07_Product">
+        <MappingFragment StoreEntitySet="IMP_UP07_Product">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ManufacturerId" ColumnName="ManufacturerId" />
+          <ScalarProperty Name="ProductCategoryId" ColumnName="ProductCategoryId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Weigth" ColumnName="Weigth" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Length" ColumnName="Length" />
+          <ScalarProperty Name="MainImagePath" ColumnName="MainImagePath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IMP_UP07_ProductCategory">
+      <EntityTypeMapping TypeName="ip117Model.IMP_UP07_ProductCategory">
+        <MappingFragment StoreEntitySet="IMP_UP07_ProductCategory">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ParentCategoryId" ColumnName="ParentCategoryId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IMP_UP07_Service">
+      <EntityTypeMapping TypeName="ip117Model.IMP_UP07_Service">
+        <MappingFragment StoreEntitySet="IMP_UP07_Service">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="MainImagePath" ColumnName="MainImagePath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="IMP_UP07_BuyProductProduct" TypeName="ip117Model.IMP_UP07_BuyProductProduct" StoreEntitySet="IMP_UP07_BuyProductProduct">
+      <EndProperty Name="IMP_UP07_BuyProduct">
+        <ScalarProperty Name="Id" ColumnName="BuyProductId" />
+      </EndProperty>
+      <EndProperty Name="IMP_UP07_Product">
+        <ScalarProperty Name="Id" ColumnName="ProductId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="IMP_UP07_EmployeeService" TypeName="ip117Model.IMP_UP07_EmployeeService" StoreEntitySet="IMP_UP07_EmployeeService">
+      <EndProperty Name="IMP_UP07_Employee">
+        <ScalarProperty Name="Id" ColumnName="EmployeeId" />
+      </EndProperty>
+      <EndProperty Name="IMP_UP07_Service">
+        <ScalarProperty Name="Id" ColumnName="ServiceId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="IMP_UP07_ProductImageProduct" TypeName="ip117Model.IMP_UP07_ProductImageProduct" StoreEntitySet="IMP_UP07_ProductImageProduct">
+      <EndProperty Name="IMP_UP07_ImageProduct">
+        <ScalarProperty Name="Id" ColumnName="ImageProductId" />
+      </EndProperty>
+      <EndProperty Name="IMP_UP07_Product">
+        <ScalarProperty Name="Id" ColumnName="ProductId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="IMP_UP07_ServiceImageService" TypeName="ip117Model.IMP_UP07_ServiceImageService" StoreEntitySet="IMP_UP07_ServiceImageService">
+      <EndProperty Name="IMP_UP07_ImageService">
+        <ScalarProperty Name="Id" ColumnName="ImageServiceId" />
+      </EndProperty>
+      <EndProperty Name="IMP_UP07_Service">
+        <ScalarProperty Name="Id" ColumnName="ServiceId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

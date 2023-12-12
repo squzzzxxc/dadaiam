@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ec4bf50590934b238d6e9760ac059e37" Name="Diagram1" ZoomLevel="128">
+        <EntityTypeShape EntityType="ip117Model.IMP_UP07_BuyProduct" Width="1.875" PointX="5.25" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="ip117Model.IMP_UP07_Client" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ip117Model.IMP_UP07_ClientService" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ip117Model.IMP_UP07_Division" Width="1.5" PointX="1.5" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ip117Model.IMP_UP07_Employee" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ip117Model.IMP_UP07_EmployeeCategory" Width="1.5" PointX="1.5" PointY="16.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ip117Model.IMP_UP07_Gender" Width="1.75" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ip117Model.IMP_UP07_ImageProduct" Width="1.5" PointX="5.25" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ip117Model.IMP_UP07_ImageService" Width="1.5" PointX="0.75" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ip117Model.IMP_UP07_Manufacturer" Width="1.5" PointX="6.125" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ip117Model.IMP_UP07_Product" Width="2.25" PointX="7.5" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ip117Model.IMP_UP07_ProductCategory" Width="1.5" PointX="5.25" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ip117Model.IMP_UP07_Service" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
+        <AssociationConnector Association="ip117Model.FK_IMP_UP07_BuyProduct_IMP_UP07_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="ip117Model.FK_IMP_UP07_Client_IMP_UP07_Gender" ManuallyRouted="false" />
+        <AssociationConnector Association="ip117Model.FK_IMP_UP07_ClientService_IMP_UP07_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="ip117Model.FK_IMP_UP07_ClientService_IMP_UP07_Service" ManuallyRouted="false" />
+        <AssociationConnector Association="ip117Model.FK_IMP_UP07_Employee_Division" ManuallyRouted="false" />
+        <AssociationConnector Association="ip117Model.FK_IMP_UP07_Employee_IMP_UP07_EmployeeCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="ip117Model.FK_IMP_UP07_Product_IMP_UP07_Manufacturer" ManuallyRouted="false" />
+        <AssociationConnector Association="ip117Model.FK_IMP_UP07_Product_IMP_UP07_ProductCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="ip117Model.IMP_UP07_BuyProductProduct" ManuallyRouted="false" />
+        <AssociationConnector Association="ip117Model.IMP_UP07_EmployeeService" ManuallyRouted="false" />
+        <AssociationConnector Association="ip117Model.IMP_UP07_ProductImageProduct" ManuallyRouted="false" />
+        <AssociationConnector Association="ip117Model.IMP_UP07_ServiceImageService" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

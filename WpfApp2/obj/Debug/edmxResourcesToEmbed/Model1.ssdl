@@ -1,0 +1,453 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище ip117Model" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="IMP_UP07_BuyProduct">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="ClientId" Type="int" Nullable="false" />
+    <Property Name="Date" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IMP_UP07_BuyProductProduct">
+    <Key>
+      <PropertyRef Name="BuyProductId" />
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="BuyProductId" Type="int" Nullable="false" />
+    <Property Name="ProductId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IMP_UP07_Client">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="GenderId" Type="int" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Patronymic" Type="nvarchar" MaxLength="50" />
+    <Property Name="BirthOfDay" Type="date" Nullable="false" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="VisitDate" Type="date" Nullable="false" />
+    <Property Name="ImagePath" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="IMP_UP07_ClientService">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="ClientId" Type="int" Nullable="false" />
+    <Property Name="ServiceId" Type="int" Nullable="false" />
+    <Property Name="StartDate" Type="date" Nullable="false" />
+    <Property Name="Comment" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="IMP_UP07_Division">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IMP_UP07_Employee">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="EmployeeCategoryId" Type="int" Nullable="false" />
+    <Property Name="CodeDivision" Type="int" Nullable="false" />
+    <Property Name="GenderId" Type="int" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Patronymic" Type="nvarchar" MaxLength="50" />
+    <Property Name="SeriesPassport" Type="int" Nullable="false" />
+    <Property Name="NumberPassport" Type="int" Nullable="false" />
+    <Property Name="PaymentRatio" Type="decimal" Precision="18" Scale="10" Nullable="false" />
+    <Property Name="BirthOfDay" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IMP_UP07_EmployeeCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IMP_UP07_EmployeeService">
+    <Key>
+      <PropertyRef Name="EmployeeId" />
+      <PropertyRef Name="ServiceId" />
+    </Key>
+    <Property Name="EmployeeId" Type="int" Nullable="false" />
+    <Property Name="ServiceId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IMP_UP07_Gender">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IMP_UP07_ImageProduct">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="ImagePath" Type="nvarchar" MaxLength="150" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IMP_UP07_ImageService">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="ImagePath" Type="nvarchar" MaxLength="150" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IMP_UP07_Manufacturer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IMP_UP07_Product">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="ManufacturerId" Type="int" Nullable="false" />
+    <Property Name="ProductCategoryId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Price" Type="money" Nullable="false" />
+    <Property Name="Weigth" Type="float" Nullable="false" />
+    <Property Name="Width" Type="float" Nullable="false" />
+    <Property Name="Height" Type="float" Nullable="false" />
+    <Property Name="Length" Type="float" Nullable="false" />
+    <Property Name="MainImagePath" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="IMP_UP07_ProductCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="ParentCategoryId" Type="int" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IMP_UP07_ProductImageProduct">
+    <Key>
+      <PropertyRef Name="ProductId" />
+      <PropertyRef Name="ImageProductId" />
+    </Key>
+    <Property Name="ProductId" Type="int" Nullable="false" />
+    <Property Name="ImageProductId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IMP_UP07_Service">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="EmployeeId" Type="int" />
+    <Property Name="Discount" Type="int" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Duration" Type="int" Nullable="false" />
+    <Property Name="Price" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="250" />
+    <Property Name="MainImagePath" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="IMP_UP07_ServiceImageService">
+    <Key>
+      <PropertyRef Name="ServiceId" />
+      <PropertyRef Name="ImageServiceId" />
+    </Key>
+    <Property Name="ServiceId" Type="int" Nullable="false" />
+    <Property Name="ImageServiceId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_IMP_UP07_BuyProduct_IMP_UP07_Client">
+    <End Role="IMP_UP07_Client" Type="Self.IMP_UP07_Client" Multiplicity="1" />
+    <End Role="IMP_UP07_BuyProduct" Type="Self.IMP_UP07_BuyProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IMP_UP07_Client">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IMP_UP07_BuyProduct">
+        <PropertyRef Name="ClientId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IMP_UP07_BuyProductProduct_IMP_UP07_BuyProduct">
+    <End Role="IMP_UP07_BuyProduct" Type="Self.IMP_UP07_BuyProduct" Multiplicity="1" />
+    <End Role="IMP_UP07_BuyProductProduct" Type="Self.IMP_UP07_BuyProductProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IMP_UP07_BuyProduct">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IMP_UP07_BuyProductProduct">
+        <PropertyRef Name="BuyProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IMP_UP07_BuyProductProduct_IMP_UP07_Product">
+    <End Role="IMP_UP07_Product" Type="Self.IMP_UP07_Product" Multiplicity="1" />
+    <End Role="IMP_UP07_BuyProductProduct" Type="Self.IMP_UP07_BuyProductProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IMP_UP07_Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IMP_UP07_BuyProductProduct">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IMP_UP07_Client_IMP_UP07_Gender">
+    <End Role="IMP_UP07_Gender" Type="Self.IMP_UP07_Gender" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IMP_UP07_Client" Type="Self.IMP_UP07_Client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IMP_UP07_Gender">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IMP_UP07_Client">
+        <PropertyRef Name="GenderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IMP_UP07_ClientService_IMP_UP07_Client">
+    <End Role="IMP_UP07_Client" Type="Self.IMP_UP07_Client" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IMP_UP07_ClientService" Type="Self.IMP_UP07_ClientService" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IMP_UP07_Client">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IMP_UP07_ClientService">
+        <PropertyRef Name="ClientId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IMP_UP07_ClientService_IMP_UP07_Service">
+    <End Role="IMP_UP07_Service" Type="Self.IMP_UP07_Service" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IMP_UP07_ClientService" Type="Self.IMP_UP07_ClientService" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IMP_UP07_Service">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IMP_UP07_ClientService">
+        <PropertyRef Name="ServiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IMP_UP07_Employee_Division">
+    <End Role="IMP_UP07_Division" Type="Self.IMP_UP07_Division" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IMP_UP07_Employee" Type="Self.IMP_UP07_Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IMP_UP07_Division">
+        <PropertyRef Name="Code" />
+      </Principal>
+      <Dependent Role="IMP_UP07_Employee">
+        <PropertyRef Name="CodeDivision" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IMP_UP07_Employee_IMP_UP07_EmployeeCategory">
+    <End Role="IMP_UP07_EmployeeCategory" Type="Self.IMP_UP07_EmployeeCategory" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IMP_UP07_Employee" Type="Self.IMP_UP07_Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IMP_UP07_EmployeeCategory">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IMP_UP07_Employee">
+        <PropertyRef Name="EmployeeCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IMP_UP07_EmployeeService_IMP_UP07_Employee">
+    <End Role="IMP_UP07_Employee" Type="Self.IMP_UP07_Employee" Multiplicity="1" />
+    <End Role="IMP_UP07_EmployeeService" Type="Self.IMP_UP07_EmployeeService" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IMP_UP07_Employee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IMP_UP07_EmployeeService">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IMP_UP07_EmployeeService_IMP_UP07_Service">
+    <End Role="IMP_UP07_Service" Type="Self.IMP_UP07_Service" Multiplicity="1" />
+    <End Role="IMP_UP07_EmployeeService" Type="Self.IMP_UP07_EmployeeService" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IMP_UP07_Service">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IMP_UP07_EmployeeService">
+        <PropertyRef Name="ServiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IMP_UP07_Product_IMP_UP07_Manufacturer">
+    <End Role="IMP_UP07_Manufacturer" Type="Self.IMP_UP07_Manufacturer" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IMP_UP07_Product" Type="Self.IMP_UP07_Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IMP_UP07_Manufacturer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IMP_UP07_Product">
+        <PropertyRef Name="ManufacturerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IMP_UP07_Product_IMP_UP07_ProductCategory">
+    <End Role="IMP_UP07_ProductCategory" Type="Self.IMP_UP07_ProductCategory" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IMP_UP07_Product" Type="Self.IMP_UP07_Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IMP_UP07_ProductCategory">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IMP_UP07_Product">
+        <PropertyRef Name="ProductCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IMP_UP07_ProductImageProduct_IMP_UP07_ImageProduct">
+    <End Role="IMP_UP07_ImageProduct" Type="Self.IMP_UP07_ImageProduct" Multiplicity="1" />
+    <End Role="IMP_UP07_ProductImageProduct" Type="Self.IMP_UP07_ProductImageProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IMP_UP07_ImageProduct">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IMP_UP07_ProductImageProduct">
+        <PropertyRef Name="ImageProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IMP_UP07_ProductImageProduct_IMP_UP07_Product">
+    <End Role="IMP_UP07_Product" Type="Self.IMP_UP07_Product" Multiplicity="1" />
+    <End Role="IMP_UP07_ProductImageProduct" Type="Self.IMP_UP07_ProductImageProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IMP_UP07_Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IMP_UP07_ProductImageProduct">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IMP_UP07_ServiceImageService_IMP_UP07_ImageService">
+    <End Role="IMP_UP07_ImageService" Type="Self.IMP_UP07_ImageService" Multiplicity="1" />
+    <End Role="IMP_UP07_ServiceImageService" Type="Self.IMP_UP07_ServiceImageService" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IMP_UP07_ImageService">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IMP_UP07_ServiceImageService">
+        <PropertyRef Name="ImageServiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IMP_UP07_ServiceImageService_IMP_UP07_Service">
+    <End Role="IMP_UP07_Service" Type="Self.IMP_UP07_Service" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IMP_UP07_ServiceImageService" Type="Self.IMP_UP07_ServiceImageService" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IMP_UP07_Service">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IMP_UP07_ServiceImageService">
+        <PropertyRef Name="ServiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище ip117ModelContainer">
+    <EntitySet Name="IMP_UP07_BuyProduct" EntityType="Self.IMP_UP07_BuyProduct" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IMP_UP07_BuyProductProduct" EntityType="Self.IMP_UP07_BuyProductProduct" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IMP_UP07_Client" EntityType="Self.IMP_UP07_Client" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IMP_UP07_ClientService" EntityType="Self.IMP_UP07_ClientService" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IMP_UP07_Division" EntityType="Self.IMP_UP07_Division" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IMP_UP07_Employee" EntityType="Self.IMP_UP07_Employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IMP_UP07_EmployeeCategory" EntityType="Self.IMP_UP07_EmployeeCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IMP_UP07_EmployeeService" EntityType="Self.IMP_UP07_EmployeeService" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IMP_UP07_Gender" EntityType="Self.IMP_UP07_Gender" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IMP_UP07_ImageProduct" EntityType="Self.IMP_UP07_ImageProduct" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IMP_UP07_ImageService" EntityType="Self.IMP_UP07_ImageService" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IMP_UP07_Manufacturer" EntityType="Self.IMP_UP07_Manufacturer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IMP_UP07_Product" EntityType="Self.IMP_UP07_Product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IMP_UP07_ProductCategory" EntityType="Self.IMP_UP07_ProductCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IMP_UP07_ProductImageProduct" EntityType="Self.IMP_UP07_ProductImageProduct" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IMP_UP07_Service" EntityType="Self.IMP_UP07_Service" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IMP_UP07_ServiceImageService" EntityType="Self.IMP_UP07_ServiceImageService" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_IMP_UP07_BuyProduct_IMP_UP07_Client" Association="Self.FK_IMP_UP07_BuyProduct_IMP_UP07_Client">
+      <End Role="IMP_UP07_Client" EntitySet="IMP_UP07_Client" />
+      <End Role="IMP_UP07_BuyProduct" EntitySet="IMP_UP07_BuyProduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IMP_UP07_BuyProductProduct_IMP_UP07_BuyProduct" Association="Self.FK_IMP_UP07_BuyProductProduct_IMP_UP07_BuyProduct">
+      <End Role="IMP_UP07_BuyProduct" EntitySet="IMP_UP07_BuyProduct" />
+      <End Role="IMP_UP07_BuyProductProduct" EntitySet="IMP_UP07_BuyProductProduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IMP_UP07_BuyProductProduct_IMP_UP07_Product" Association="Self.FK_IMP_UP07_BuyProductProduct_IMP_UP07_Product">
+      <End Role="IMP_UP07_Product" EntitySet="IMP_UP07_Product" />
+      <End Role="IMP_UP07_BuyProductProduct" EntitySet="IMP_UP07_BuyProductProduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IMP_UP07_Client_IMP_UP07_Gender" Association="Self.FK_IMP_UP07_Client_IMP_UP07_Gender">
+      <End Role="IMP_UP07_Gender" EntitySet="IMP_UP07_Gender" />
+      <End Role="IMP_UP07_Client" EntitySet="IMP_UP07_Client" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IMP_UP07_ClientService_IMP_UP07_Client" Association="Self.FK_IMP_UP07_ClientService_IMP_UP07_Client">
+      <End Role="IMP_UP07_Client" EntitySet="IMP_UP07_Client" />
+      <End Role="IMP_UP07_ClientService" EntitySet="IMP_UP07_ClientService" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IMP_UP07_ClientService_IMP_UP07_Service" Association="Self.FK_IMP_UP07_ClientService_IMP_UP07_Service">
+      <End Role="IMP_UP07_Service" EntitySet="IMP_UP07_Service" />
+      <End Role="IMP_UP07_ClientService" EntitySet="IMP_UP07_ClientService" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IMP_UP07_Employee_Division" Association="Self.FK_IMP_UP07_Employee_Division">
+      <End Role="IMP_UP07_Division" EntitySet="IMP_UP07_Division" />
+      <End Role="IMP_UP07_Employee" EntitySet="IMP_UP07_Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IMP_UP07_Employee_IMP_UP07_EmployeeCategory" Association="Self.FK_IMP_UP07_Employee_IMP_UP07_EmployeeCategory">
+      <End Role="IMP_UP07_EmployeeCategory" EntitySet="IMP_UP07_EmployeeCategory" />
+      <End Role="IMP_UP07_Employee" EntitySet="IMP_UP07_Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IMP_UP07_EmployeeService_IMP_UP07_Employee" Association="Self.FK_IMP_UP07_EmployeeService_IMP_UP07_Employee">
+      <End Role="IMP_UP07_Employee" EntitySet="IMP_UP07_Employee" />
+      <End Role="IMP_UP07_EmployeeService" EntitySet="IMP_UP07_EmployeeService" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IMP_UP07_EmployeeService_IMP_UP07_Service" Association="Self.FK_IMP_UP07_EmployeeService_IMP_UP07_Service">
+      <End Role="IMP_UP07_Service" EntitySet="IMP_UP07_Service" />
+      <End Role="IMP_UP07_EmployeeService" EntitySet="IMP_UP07_EmployeeService" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IMP_UP07_Product_IMP_UP07_Manufacturer" Association="Self.FK_IMP_UP07_Product_IMP_UP07_Manufacturer">
+      <End Role="IMP_UP07_Manufacturer" EntitySet="IMP_UP07_Manufacturer" />
+      <End Role="IMP_UP07_Product" EntitySet="IMP_UP07_Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IMP_UP07_Product_IMP_UP07_ProductCategory" Association="Self.FK_IMP_UP07_Product_IMP_UP07_ProductCategory">
+      <End Role="IMP_UP07_ProductCategory" EntitySet="IMP_UP07_ProductCategory" />
+      <End Role="IMP_UP07_Product" EntitySet="IMP_UP07_Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IMP_UP07_ProductImageProduct_IMP_UP07_ImageProduct" Association="Self.FK_IMP_UP07_ProductImageProduct_IMP_UP07_ImageProduct">
+      <End Role="IMP_UP07_ImageProduct" EntitySet="IMP_UP07_ImageProduct" />
+      <End Role="IMP_UP07_ProductImageProduct" EntitySet="IMP_UP07_ProductImageProduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IMP_UP07_ProductImageProduct_IMP_UP07_Product" Association="Self.FK_IMP_UP07_ProductImageProduct_IMP_UP07_Product">
+      <End Role="IMP_UP07_Product" EntitySet="IMP_UP07_Product" />
+      <End Role="IMP_UP07_ProductImageProduct" EntitySet="IMP_UP07_ProductImageProduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IMP_UP07_ServiceImageService_IMP_UP07_ImageService" Association="Self.FK_IMP_UP07_ServiceImageService_IMP_UP07_ImageService">
+      <End Role="IMP_UP07_ImageService" EntitySet="IMP_UP07_ImageService" />
+      <End Role="IMP_UP07_ServiceImageService" EntitySet="IMP_UP07_ServiceImageService" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IMP_UP07_ServiceImageService_IMP_UP07_Service" Association="Self.FK_IMP_UP07_ServiceImageService_IMP_UP07_Service">
+      <End Role="IMP_UP07_Service" EntitySet="IMP_UP07_Service" />
+      <End Role="IMP_UP07_ServiceImageService" EntitySet="IMP_UP07_ServiceImageService" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
