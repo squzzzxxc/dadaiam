@@ -27,7 +27,7 @@ namespace WpfApp2
             GenderComboBox.ItemsSource = DBContext.GetContext().IMP_UP07_Gender.ToList();
             UpdateClients();
         }
-        private void UpdateClients()
+        public void UpdateClients()
         {
             var clients = DBContext.GetContext().IMP_UP07_Client.ToList();
             if (GenderComboBox.SelectedIndex != -1)
@@ -70,6 +70,57 @@ namespace WpfApp2
         private void SearchTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             UpdateClients();
+        }
+
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            if(dataGrid.SelectedItem != null)
+            {
+                var dialogResult = MessageBox.Show("Вы действительно хотите удалть данные?", "Удаление данных", MessageBoxButton.YesNo);
+                if (dialogResult == MessageBoxResult.Yes)
+                {
+                    try
+                    {
+                        IMP_UP07_Client client = dataGrid.SelectedItem as IMP_UP07_Client;
+                        DBContext.GetContext().IMP_UP07_Client.Remove(client);
+                        DBContext.GetContext().SaveChanges();
+                        UpdateClients();
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Произошла ошибка при выполнении запроса к БД", "Ошибка");
+                    }
+                }
+                
+            }
+        }
+
+        private void dataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (dataGrid.SelectedItem != null)
+            {
+                DeleteButton.IsEnabled = true;
+                EditButton.IsEnabled = true;
+            }
+            else
+            {
+                DeleteButton.IsEnabled = false;
+                EditButton.IsEnabled = false;
+            }
+        }
+
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+            Window1 window = new Window1();
+            window.Owner = this;
+            window.Show();
+        }
+
+        private void EditButton_Click(object sender, RoutedEventArgs e)
+        {
+            Window1 window = new Window1((IMP_UP07_Client)dataGrid.SelectedItem);
+            window.Owner = this;
+            window.Show();
         }
     }
 }

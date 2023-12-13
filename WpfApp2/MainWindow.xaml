@@ -17,7 +17,7 @@
                 <ComboBoxItem>Сортировка по фамилии (уб.)</ComboBoxItem>
             </ComboBox.Items>
         </ComboBox>
-        <DataGrid CanUserSortColumns="True" Margin="50" AutoGenerateColumns="False" Name="dataGrid">
+        <DataGrid CanUserSortColumns="True" Margin="50" AutoGenerateColumns="False" Name="dataGrid" SelectionChanged="dataGrid_SelectionChanged">
             <DataGrid.Columns>
                 <DataGridTemplateColumn Header="Изображение">
                     <DataGridTemplateColumn.CellTemplate>
@@ -38,6 +38,8 @@
 
             </DataGrid.Columns>
         </DataGrid>
-        
+        <Button x:Name="AddButton"  Content="Добавить" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,117,10" Click="AddButton_Click"></Button>
+        <Button x:Name="EditButton" IsEnabled="False"  Content="Редактировать" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,188,10" Click="EditButton_Click"></Button>
+        <Button x:Name="DeleteButton" IsEnabled="False" Content="Удалить" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,50,10" Click="DeleteButton_Click"></Button>
     </Grid>
 </Window>
